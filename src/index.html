@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+          rel="stylesheet">
+    <!--  <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Taste Music App</title>
+</head>
+
+<body>
+    <section class="hero container-fluid">
+        <div class="hero__inner">
+            <div class="hero__inner__title text-center">
+                <h1>taste</h1>
+                <h2>engage</h2>
+                <h2>in</h2>
+                <h2>art</h2>
+            </div>
+        </div>
+    </section>
+    <section class="nav container">
+        <div class="row justify-content-between">
+            <div class="col-sm-4 offset-4 ">
+                <div class="row align-items-center nav__links">
+                    <div class="col nav__links__home ">
+                        <a href="#home">
+                            <h3>home</h3>
+                        </a>
+                    </div>
+                    <div class="col nav__links__search">
+                        <a href="#search">
+                            <h3>search</h3>
+                        </a>
+                    </div>
+                    <div class="col nav__links__discover">
+                        <a href="#discover">
+                            <h3>discover</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div id="pages">
+        <section id="home">
+            <div class="home-wrapper"></div>
+        </section>
+        <section id="search">
+            <div class="search-wrapper"></div>
+        </section>
+        <section id="discover">
+            <div class="discover-wrapper"></div>
+        </section>
+    </div>
+
+    <script id="template-home-page" type="text/x-handlebars-template">
+    <div id="home">
+        <section id="songs-wrapper">
+            <div class="title">
+            </div>
+            <div class="player">
+            </div>
+        </section>
+        <section class="subscribe container-fluid">
+            <h4 class="subscribe__inner-title"><span>subscribe </span>now</h4>
+            <div class="row subscribe__inner ">
+                <div class="col-2 offset-2 ">
+                    <button type="submit">Join Now</button>
+                </div>
+                <div class="col-2 offset-1 subscribe__inner-artist">
+                    <h4 class="name">Dean</h4>
+                    <h4 class="surname">Hen<span>son</span></h4>
+                </div>
+                <div class="col-3 subscribe__inner-image">
+                    <img src="./images/artist.jpg">
+                </div>
+
+                <div class="col-5 offset-5 subscribe__inner-info">
+                    <h3>New album</h3>
+                    <h3>Available only for subscribers</h3>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</script>
+
+    <script id="template-search-page" type="text/x-handlebars-template">
+    <div id="search">
+        SEARCH
+
+    </div>
+</script>
+
+    <script id="template-discover-page" type="text/x-handlebars-template">
+    <div id="discover">
+        DISCOVER
+    </div>
+</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <!--     <script
+            src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js">
+            </script> -->
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>

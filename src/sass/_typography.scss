@@ -1,0 +1,38 @@
+/* Potrzebujesz uniwersalnych klas dla nagłówków, tytułów? Będziemy umieszczać je właśnie tutaj! */
+
+/*titles*/
+
+h1 {
+  font-family: $font-main;
+  color: $font-color-main;
+  text-transform: uppercase;
+  font-size: 200px;
+  font-weight: 900;
+  letter-spacing: 100px;
+}
+
+h2 {
+  font-family: $font-main;
+  color: $font-color-main;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 50px;
+}
+
+h3 {
+  font-family: $font-main;
+  color: $font-color-main;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  // letter-spacing: 50px;
+}
+
+h4 {
+  font-family: $font-main;
+  color: $font-color-main;
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 30px;
+}

@@ -1,0 +1,66 @@
+//*subscribe section
+
+#songs-wrapper {
+  height: 800px;
+}
+
+.subscribe {
+  background: url("../images/subscribe.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: 50%;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -3;
+
+  &__inner {
+    height: 80%;
+    &-image {
+      position: relative;
+      top: 170px;
+      img {
+        width: 100%;
+      }
+      z-index: -1;
+    }
+
+    &-artist {
+      position: relative;
+      top: 660px;
+      right: -120px;
+      h4 {
+        margin: 0;
+      }
+      .surname {
+        position: relative;
+        right: -80px;
+        span {
+          color: $highlight-color;
+        }
+      }
+    }
+    &-info {
+      text-align: right;
+      h3 {
+        color: $font-color-light;
+      }
+      h3:nth-of-type(2) {
+        text-transform: none;
+        color: $font-color-main;
+      }
+    }
+
+    &-title {
+      text-align: center;
+      margin: 0;
+      position: relative;
+      top: -70px;
+    }
+
+    button {
+      position: relative;
+      top: 660px;
+    }
+  }
+}
