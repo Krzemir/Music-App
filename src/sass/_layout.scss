@@ -2,6 +2,7 @@
 
 body {
   background-color: $background-color;
+  color: $font-color-light;
 }
 
 .container {
@@ -28,14 +29,4 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
   }
-}
-
-.nav__links {
-  a {
-    text-decoration: none;
-  }
-}
-
-.page-active {
-  display: block;
 }

@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
           rel="stylesheet">
-    <!--  <link rel="stylesheet" type="text/css"
-          href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css"> -->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Taste Music App</title>
 </head>
@@ -31,19 +31,13 @@
             <div class="col-sm-4 offset-4 ">
                 <div class="row align-items-center nav__links">
                     <div class="col nav__links__home ">
-                        <a href="#home">
-                            <h3>home</h3>
-                        </a>
+                        <h3> <a href="#home">home</a></h3>
                     </div>
                     <div class="col nav__links__search">
-                        <a href="#search">
-                            <h3>search</h3>
-                        </a>
+                        <h3> <a href="#search">search</a></h3>
                     </div>
                     <div class="col nav__links__discover">
-                        <a href="#discover">
-                            <h3>discover</h3>
-                        </a>
+                        <h3> <a href="#discover">discover</a></h3>
                     </div>
                 </div>
             </div>
@@ -54,6 +48,7 @@
 
     <div id="pages">
         <section id="home">
+
             <div class="home-wrapper"></div>
         </section>
         <section id="search">
@@ -67,9 +62,24 @@
     <script id="template-home-page" type="text/x-handlebars-template">
     <div id="home">
         <section id="songs-wrapper">
-            <div class="title">
-            </div>
-            <div class="player">
+            <div class="player__wrapper ">
+                <div class="player__title col-4 offset-4"> 
+                    <h3>{{artist}} - {{title}}<!-- John Doe - Where did my love go? --></h3>
+                </div>
+                <div class="player col-4 offset-4">
+                        <audio>
+                            <source src="./songs/At_The_Top_David_Renda.mp3" type="audio/mpeg">
+                        </audio>
+                </div>
+                    <div class="player__details row">
+                        <div class="player__details-categories col-2 offset-4">
+                           <h5>Categories: {{categories}} <!-- Slow, melancholy --></h5> 
+                        </div>
+                        <div class="player__details-ranking col-2">
+                            <h5><!-- #4 --> {{ranking}} in the ranking</h5>
+                        </div>
+                 </div>
+
             </div>
         </section>
         <section class="subscribe container-fluid">
@@ -98,22 +108,24 @@
 
     <script id="template-search-page" type="text/x-handlebars-template">
     <div id="search">
+       <div>
         SEARCH
+       </div> 
 
     </div>
 </script>
 
     <script id="template-discover-page" type="text/x-handlebars-template">
     <div id="discover">
-        DISCOVER
+        <div>DISCOVER</div>
     </div>
 </script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-    <!--     <script
+    <script
             src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js">
-            </script> -->
+            </script>
     <script src="js/script.js" type="module"></script>
 </body>
 

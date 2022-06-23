@@ -2,6 +2,8 @@ export const select = {
   containerOf: {
     pages: '#pages',
     homePage: '.home-wrapper',
+    searchPage: '.search-wrapper',
+    discoverPage: '.discover-wrapper',
   },
 
   templateOf: {
@@ -19,6 +21,15 @@ export const classNames = {
   pages: {
     active: 'active',
   },
+  nav: {
+    active: 'active',
+  },
+};
+
+export const db = {
+  //url: '//' + window.location.hostname + (window.location.hostname == 'localhost' ? ':3131' : ''),
+  url: '//localhost:3131',
+  songs: 'songs',
 };
 
 export const templates = {

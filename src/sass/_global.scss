@@ -13,3 +13,43 @@ button {
   border-radius: 10px;
   text-align: center;
 }
+
+.player__wrapper {
+  margin: auto;
+}
+
+.player {
+  margin: auto;
+  &__title {
+    text-align: center;
+  }
+
+  &__details-categories {
+    text-align: left;
+  }
+  &__details-ranking {
+    text-align: right;
+  }
+}
+
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+.nav__links {
+  a {
+    text-decoration: none;
+  }
+  * {
+    color: $font-color-light;
+  }
+  .active {
+    color: $font-color-main;
+  }
+}
