@@ -2,7 +2,6 @@ import { select, classNames, db } from './settings.js';
 import Home from './home.js';
 import Search from './search.js';
 import Discover from './discover.js';
-import Player from './player.js';
 
 const log = console.log;
 
@@ -59,34 +58,11 @@ const app = {
     new Discover();
   },
 
-  initPlayer: function () {
-    new Player();
-  },
-
-  initData: function () {
-    const thisApp = this;
-
-    thisApp.data = {};
-    const url = db.url + '/' + db.songs;
-
-    fetch(url)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        thisApp.data.songs = data;
-      });
-
-    log('data', thisApp.data);
-  },
-
   init: function () {
-    this.initData();
     this.initHome();
     this.initSearch();
     this.initDiscover();
     this.initPages();
-    this.initPlayer();
   },
 };
 

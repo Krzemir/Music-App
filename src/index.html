@@ -48,7 +48,7 @@
 
     <div id="pages">
         <section id="home">
-
+            <div class="player-wrapper"></div>
             <div class="home-wrapper"></div>
         </section>
         <section id="search">
@@ -59,29 +59,32 @@
         </section>
     </div>
 
-    <script id="template-home-page" type="text/x-handlebars-template">
-    <div id="home">
-        <section id="songs-wrapper">
-            <div class="player__wrapper ">
+    <script id="template-player" type="text/x-handlebars-template">
                 <div class="player__title col-4 offset-4"> 
-                    <h3>{{artist}} - {{title}}<!-- John Doe - Where did my love go? --></h3>
+                    <h3> {{title}}</h3>
                 </div>
                 <div class="player col-4 offset-4">
                         <audio>
-                            <source src="./songs/At_The_Top_David_Renda.mp3" type="audio/mpeg">
+                            {{{fileUrl}}}
+                            <source>
                         </audio>
                 </div>
                     <div class="player__details row">
                         <div class="player__details-categories col-2 offset-4">
-                           <h5>Categories: {{categories}} <!-- Slow, melancholy --></h5> 
+                           <h5>Categories: {{categories}} </h5> 
                         </div>
                         <div class="player__details-ranking col-2">
-                            <h5><!-- #4 --> {{ranking}} in the ranking</h5>
+                            <h5>{{ranking}} in the ranking</h5>
                         </div>
                  </div>
+    </script>
 
-            </div>
-        </section>
+    <script id="template-home-page" type="text/x-handlebars-template">
+    <div id="home">
+        <div class="temporary-separator">
+
+        </div>
+       
         <section class="subscribe container-fluid">
             <h4 class="subscribe__inner-title"><span>subscribe </span>now</h4>
             <div class="row subscribe__inner ">
