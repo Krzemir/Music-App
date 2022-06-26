@@ -26,8 +26,10 @@ class Discover {
 
       if (song.id == randomSong) {
         const playerContainer = document.querySelector(select.containerOf.playerDiscover);
+        console.log(playerContainer);
         const generatedHTML = templates.player(templateData);
-        playerContainer.innerHTML += generatedHTML;
+        console.log(generatedHTML);
+        playerContainer.innerHTML = generatedHTML;
       }
     }
     new Player();

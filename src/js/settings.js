@@ -4,7 +4,7 @@ export const select = {
     homePage: '.home-wrapper',
     searchPage: '.search-wrapper',
     discoverPage: '.discover-wrapper',
-    playerHome: '.player-wrapper',
+    playerHome: '.player-wrapper-home',
     playerSearch: '.player-wrapper-search',
     playerDiscover: '.player-wrapper-discover',
   },

@@ -1,5 +1,3 @@
-import { db } from './settings.js';
-
 class Player {
   constructor() {
     const thisPlayer = this;

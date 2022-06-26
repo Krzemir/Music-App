@@ -46,17 +46,8 @@ const app = {
     }
   },
 
-  // initHome: function (allSongs) {
-  //   new Home(allSongs);
-  // },
-
-  // initSearch: function (allSongs) {
-  //   new Search(allSongs);
-  // },
-
   initData() {
     const thisPage = this;
-    // thisPage.data = [];
     const url = db.url + '/' + db.songs;
 
     fetch(url)
@@ -66,23 +57,15 @@ const app = {
       .then(function (data) {
         thisPage.data = data;
 
-        // const allSongs = Object.assign(thisPage.data, data);
-
-        //thisPage.initHome(thisPage.data);
         new Home(thisPage.data);
         new Search(thisPage.data);
         new Discover(thisPage.data);
-
-        //thisPage.initSearch(thisPage.data);
       });
   },
 
   init: function () {
-    this.initData();
-    // this.initHome();
-    //this.initSearch();
-    //this.initDiscover();
     this.initPages();
+    this.initData();
   },
 };
 
