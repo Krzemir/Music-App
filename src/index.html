@@ -61,7 +61,7 @@
 
     <script id="template-player" type="text/x-handlebars-template">
                 <div class="player__title col-4 offset-4"> 
-                    <h3> {{title}}</h3>
+                    <h3> {{author}} - {{title}}</h3>
                 </div>
                 <div class="player col-4 offset-4">
                         <audio>
@@ -89,7 +89,7 @@
             <h4 class="subscribe__inner-title"><span>subscribe </span>now</h4>
             <div class="row subscribe__inner ">
                 <div class="col-2 offset-2 ">
-                    <button type="submit">Join Now</button>
+                    <button type="submit" class="button">Join Now</button>
                 </div>
                 <div class="col-2 offset-1 subscribe__inner-artist">
                     <h4 class="name">Dean</h4>
@@ -103,17 +103,31 @@
                     <h3>New album</h3>
                     <h3>Available only for subscribers</h3>
                 </div>
-
             </div>
         </section>
     </div>
 </script>
 
     <script id="template-search-page" type="text/x-handlebars-template">
-    <div id="search">
-       <div>
-        SEARCH
-       </div> 
+    <div id="search" class="container">
+        <div class="col-4 offset-4 search-title">
+            <h3>Search</h3>
+        </div>
+        <div class="row search-area">
+            <div class="col-1 offset-4">
+             <h3>Name</h3>
+            </div>
+            <div class="col-3">
+            <form class="search-form">
+                 <input type="text" id="search_input" class="placeholder">
+                <input type="submit" value="search" class="search-button">
+            </form>
+        </div>
+        </div>
+
+    </div>
+    <div class="player-wrapper-search"></div>
+    <div class="filler">
 
     </div>
 </script>

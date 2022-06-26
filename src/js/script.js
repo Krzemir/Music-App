@@ -3,7 +3,7 @@ import Home from './home.js';
 import Search from './search.js';
 import Discover from './discover.js';
 
-const log = console.log;
+//const log = console.log;
 
 const app = {
   initPages: function () {
@@ -46,22 +46,45 @@ const app = {
     }
   },
 
-  initHome: function () {
-    new Home();
-  },
+  // initHome: function (allSongs) {
+  //   new Home(allSongs);
+  // },
 
-  initSearch: function () {
-    new Search();
-  },
+  // initSearch: function (allSongs) {
+  //   new Search(allSongs);
+  // },
 
   initDiscover: function () {
     new Discover();
   },
 
+  initData() {
+    const thisPage = this;
+    // thisPage.data = [];
+    const url = db.url + '/' + db.songs;
+
+    fetch(url)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        thisPage.data = data;
+
+        // const allSongs = Object.assign(thisPage.data, data);
+
+        //thisPage.initHome(thisPage.data);
+        new Home(thisPage.data);
+        new Search(thisPage.data);
+
+        //thisPage.initSearch(thisPage.data);
+      });
+  },
+
   init: function () {
-    this.initHome();
-    this.initSearch();
-    this.initDiscover();
+    this.initData();
+    // this.initHome();
+    //this.initSearch();
+    //this.initDiscover();
     this.initPages();
   },
 };

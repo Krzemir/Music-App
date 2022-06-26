@@ -1,51 +1,54 @@
-import { select, templates, db } from './settings.js';
+import { select, templates } from './settings.js';
 import Player from './player.js';
 
-const log = console.log;
+//const log = console.log;
 class Home {
-  constructor() {
+  constructor(allSongs) {
+    //log(allSongs);
     const thisPage = this;
-    thisPage.initData();
-    // thisPage.renderPlayer();
+    //thisPage.initData();
+    thisPage.initPlayer(allSongs);
     thisPage.renderPage();
 
     // thisPage.initPlayer(thisPage.data);
   }
 
-  initData() {
-    const thisPage = this;
-    thisPage.data = {};
-    const url = db.url + '/' + db.songs;
+  // initData() {
+  //   const thisPage = this;
+  //   // thisPage.data = [];
+  //   const url = db.url + '/' + db.songs;
 
-    fetch(url)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        const allSongs = Object.assign(thisPage.data, data);
+  //   fetch(url)
+  //     .then(function (response) {
+  //       return response.json();
+  //     })
+  //     .then(function (data) {
+  //       thisPage.data = data;
 
-        thisPage.initPlayer(allSongs);
-      });
-  }
+  //       // const allSongs = Object.assign(thisPage.data, data);
+
+  //       thisPage.initPlayer(thisPage.data);
+  //     });
+  // }
 
   initPlayer(allSongs) {
-    const thisPage = this;
-
-    for (let song in allSongs) {
-      const songData = allSongs[song];
-      const songId = songData.id;
-      const songAuthor = songData.author;
-      const songTitle = songData.title;
-      const songFileName = songData.filename;
-      const songCategories = songData.categories;
-      const songRanking = songData.ranking;
-      const songFileUrl = '<source src="./songs/' + songFileName + '" type="audio/mpeg">';
+    // log(allSongs);
+    for (let song of allSongs) {
+      // const songData = allSongs[song];
+      // const songId = songData.id;
+      // const songAuthor = songData.author;
+      // const songTitle = songData.title;
+      // const songFileName = songData.filename;
+      // const songCategories = songData.categories;
+      // const songRanking = songData.ranking;
+      const songFileUrl = '<source src="./songs/' + song.filename + '" type="audio/mpeg">';
 
       const templateData = {
-        title: songTitle,
-        categories: songCategories,
-        ranking: songRanking,
-        file: songFileName,
+        title: song.title,
+        author: song.author,
+        categories: song.categories,
+        ranking: song.ranking,
+        file: song.filename,
         fileUrl: songFileUrl,
       };
 

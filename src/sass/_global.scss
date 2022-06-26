@@ -1,6 +1,6 @@
 /* miejscem na te reguły, które nie tyczą się ani układu, ani bezpośrednio tekstu, ale wcaiąż mogą być traktowane jako uniwersalne, czyli właśnie takie, które mogą być z powodzeniem używane w wielu miejscach – sekcjach czy podstronach. Co możemy tutaj zawrzeć? Chociażby style dla buttonów, które wyglądają identycznie w kilku sekcjach.a */
 
-button {
+.button {
   width: 310px;
   height: 130px;
   background-color: $highlight-color;

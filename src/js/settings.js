@@ -5,6 +5,7 @@ export const select = {
     searchPage: '.search-wrapper',
     discoverPage: '.discover-wrapper',
     player: '.player-wrapper',
+    playerSearch: '.player-wrapper-search',
   },
 
   templateOf: {
@@ -16,6 +17,11 @@ export const select = {
 
   nav: {
     links: '.nav__links a',
+  },
+
+  search: {
+    form: '.search-form',
+    input: '#search_input',
   },
 };
 

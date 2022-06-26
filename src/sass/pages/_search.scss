@@ -1,0 +1,38 @@
+.filler {
+  height: 300px;
+}
+.search-title {
+  h3 {
+    text-align: center;
+  }
+}
+
+form {
+  width: auto;
+  margin: 40px, auto;
+  padding: 10px;
+}
+
+.placeholder {
+  margin: 10px, auto;
+  height: 50px;
+  width: 300px;
+  background: $font-color-main;
+  border-radius: 10px;
+  font-family: $font-main;
+  font-size: 40px;
+}
+
+.search-button {
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: $highlight-color;
+  color: $font-color-main;
+  font-family: $font-main;
+  text-transform: uppercase;
+  //letter-spacing: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
