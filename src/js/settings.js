@@ -4,8 +4,9 @@ export const select = {
     homePage: '.home-wrapper',
     searchPage: '.search-wrapper',
     discoverPage: '.discover-wrapper',
-    player: '.player-wrapper',
+    playerHome: '.player-wrapper',
     playerSearch: '.player-wrapper-search',
+    playerDiscover: '.player-wrapper-discover',
   },
 
   templateOf: {

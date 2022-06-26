@@ -54,10 +54,6 @@ const app = {
   //   new Search(allSongs);
   // },
 
-  initDiscover: function () {
-    new Discover();
-  },
-
   initData() {
     const thisPage = this;
     // thisPage.data = [];
@@ -75,6 +71,7 @@ const app = {
         //thisPage.initHome(thisPage.data);
         new Home(thisPage.data);
         new Search(thisPage.data);
+        new Discover(thisPage.data);
 
         //thisPage.initSearch(thisPage.data);
       });

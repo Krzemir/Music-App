@@ -52,7 +52,7 @@ class Home {
         fileUrl: songFileUrl,
       };
 
-      const playerContainer = document.querySelector(select.containerOf.player);
+      const playerContainer = document.querySelector(select.containerOf.playerHome);
 
       const generatedHTML = templates.player(templateData);
 
