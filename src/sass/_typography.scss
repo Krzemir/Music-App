@@ -26,7 +26,17 @@ h3 {
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 700;
-  // letter-spacing: 50px;
+
+  spam {
+    text-transform: none;
+  }
+}
+
+h3.page-subtitle {
+  font-size: 40px;
+  letter-spacing: 10px;
+  font-weight: 400;
+  color: $font-color-light;
 }
 
 h4 {
@@ -43,4 +53,12 @@ h5 {
   font-size: 20px;
   font-weight: 700;
   //letter-spacing: 30px;
+}
+
+.copyright {
+  h3 {
+    text-transform: none;
+    color: $font-color-light;
+    text-align: center;
+  }
 }

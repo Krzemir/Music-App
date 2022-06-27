@@ -1,5 +1,3 @@
-/* miejscem na te reguły, które nie tyczą się ani układu, ani bezpośrednio tekstu, ale wcaiąż mogą być traktowane jako uniwersalne, czyli właśnie takie, które mogą być z powodzeniem używane w wielu miejscach – sekcjach czy podstronach. Co możemy tutaj zawrzeć? Chociażby style dla buttonów, które wyglądają identycznie w kilku sekcjach.a */
-
 .button {
   width: 310px;
   height: 130px;
@@ -17,22 +15,30 @@
 .temporary-separator {
   height: 300px;
 }
+
 .player-wrapper {
   margin: auto;
 }
 
 .player {
   margin: auto;
+
   &__title {
-    text-align: center;
+    text-align: left;
+    padding-left: 10px;
   }
 
   &__details-categories {
     text-align: left;
   }
+
   &__details-ranking {
     text-align: right;
   }
+}
+
+.green-audio-player .slider .gap-progress .pin {
+  background-color: $highlight-color;
 }
 
 #pages {
@@ -49,9 +55,11 @@
   a {
     text-decoration: none;
   }
+
   * {
     color: $font-color-light;
   }
+
   .active {
     color: $font-color-main;
   }

@@ -24,15 +24,21 @@ class Discover {
         fileUrl: '<source src="./songs/' + song.filename + '" type="audio/mpeg">',
       };
 
+      // console.log(song.title);
+
       if (song.id == randomSong) {
         const playerContainer = document.querySelector(select.containerOf.playerDiscover);
-        console.log(playerContainer);
+
         const generatedHTML = templates.player(templateData);
-        console.log(generatedHTML);
+
         playerContainer.innerHTML = generatedHTML;
       }
     }
-    new Player();
+
+    const playerContainer = document.querySelectorAll(select.containerOf.selectorPlayerDiscover);
+    console.log('contener', playerContainer);
+
+    new Player(select.containerOf.selectorPlayerDiscover);
   }
 
   render() {

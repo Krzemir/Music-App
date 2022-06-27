@@ -1,38 +1,76 @@
 .filler {
   height: 300px;
 }
+
 .search-title {
   h3 {
     text-align: center;
   }
 }
 
+.search-area {
+  height: 70px;
+  position: relative;
+  margin: auto;
+}
+
 form {
   width: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   margin: 40px, auto;
   padding: 10px;
+  display: inline;
 }
 
 .placeholder {
   margin: 10px, auto;
   height: 50px;
-  width: 300px;
+  width: 250px;
   background: $font-color-main;
   border-radius: 10px;
   font-family: $font-main;
+  color: $font-color-light;
   font-size: 40px;
+  padding-left: 10px;
+  border: none;
 }
 
 .search-button {
-  width: 150px;
+  width: 100px;
   height: 50px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
+  border: none;
   background-color: $highlight-color;
   color: $font-color-main;
   font-family: $font-main;
   text-transform: uppercase;
   //letter-spacing: 10px;
   border-radius: 10px;
+  text-align: center;
+  margin-left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h3.search-name {
+  text-transform: none;
+  color: $font-color-light;
+  text-align: right;
+  display: inline;
+  line-height: 70px;
+}
+
+.search-results-number {
+  font-family: $font-main;
+  color: $font-color-light;
+  font-size: 30px;
+  font-weight: 700px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  letter-spacing: 10px;
   text-align: center;
 }

@@ -4,9 +4,7 @@ import Player from './player.js';
 //const log = console.log;
 class Home {
   constructor(allSongs) {
-    //log(allSongs);
     const thisPage = this;
-    //thisPage.initData();
     thisPage.initPlayer(allSongs);
     thisPage.renderPage();
   }
@@ -31,7 +29,7 @@ class Home {
       playerContainer.innerHTML += generatedHTML;
     }
 
-    new Player();
+    new Player(select.containerOf.selectorPlayerHome);
   }
 
   renderPage() {

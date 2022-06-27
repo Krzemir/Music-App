@@ -5,8 +5,12 @@ export const select = {
     searchPage: '.search-wrapper',
     discoverPage: '.discover-wrapper',
     playerHome: '.player-wrapper-home',
+    selectorPlayerHome: '.player-wrapper-home .player',
     playerSearch: '.player-wrapper-search',
+    selectorPlayerSearch: '.player-wrapper-search .player',
     playerDiscover: '.player-wrapper-discover',
+    selectorPlayerDiscover: '.player-wrapper-discover .player',
+    searchResultsNumber: '.search-results-number',
   },
 
   templateOf: {

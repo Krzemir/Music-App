@@ -16,9 +16,11 @@
 
   &__inner {
     height: 80%;
+
     &-image {
       position: relative;
       top: 170px;
+
       img {
         width: 100%;
       }
@@ -29,22 +31,28 @@
       position: relative;
       top: 660px;
       right: -120px;
+
       h4 {
         margin: 0;
       }
+
       .surname {
         position: relative;
         right: -80px;
+
         span {
           color: $highlight-color;
         }
       }
     }
+
     &-info {
       text-align: right;
+
       h3 {
         color: $font-color-light;
       }
+
       h3:nth-of-type(2) {
         text-transform: none;
         color: $font-color-main;

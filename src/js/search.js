@@ -19,7 +19,7 @@ class Search {
       playerContainer.innerHTML = '';
 
       const searchData = search.value.toLowerCase();
-
+      let searchResultsNumber = 0;
       for (const song of allSongs) {
         const templateData = {
           title: song.title,
@@ -33,9 +33,22 @@ class Search {
         if (songToDisplay == true) {
           const generatedHTML = templates.player(templateData);
           playerContainer.innerHTML += generatedHTML;
+          searchResultsNumber += 1;
         }
+        console.log(searchResultsNumber);
       }
-      new Player();
+      const searchResultsNumberContainter = document.querySelector(select.containerOf.searchResultsNumber);
+      console.log(searchResultsNumberContainter);
+
+      if (searchResultsNumber == 0) {
+        searchResultsNumberContainter.innerText = 'We have found nothing';
+      } else if (searchResultsNumber > 1) {
+        searchResultsNumberContainter.innerText = 'We have found ' + searchResultsNumber + ' songs';
+      } else {
+        searchResultsNumberContainter.innerText = 'We have found 1 song';
+      }
+
+      new Player(select.containerOf.selectorPlayerSearch);
     });
   }
 

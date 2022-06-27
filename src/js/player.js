@@ -1,14 +1,14 @@
 class Player {
-  constructor() {
+  constructor(selector) {
     const thisPlayer = this;
-    // thisPlayer.initData();
-    thisPlayer.initPlayer();
+    thisPlayer.initPlayer(selector);
   }
 
-  initPlayer() {
+  initPlayer(selector) {
+    //console.log('selector', selector);
     // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({
-      selector: '.player',
+      selector: selector,
       stopOthersOnPlay: true,
     });
   }

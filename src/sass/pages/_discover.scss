@@ -1,0 +1,18 @@
+.discover-copyright {
+  text-align: center;
+}
+
+.discover {
+  &-title {
+    text-align: center;
+  }
+
+  &-subtitle {
+    text-align: center;
+
+    h3 {
+      text-transform: none;
+      color: $font-color-light;
+    }
+  }
+}
