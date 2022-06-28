@@ -4,6 +4,7 @@ export const select = {
     homePage: '.home-wrapper',
     searchPage: '.search-wrapper',
     discoverPage: '.discover-wrapper',
+    joinPage: '.join-wrapper',
     playerHome: '.player-wrapper-home',
     selectorPlayerHome: '.player-wrapper-home .player',
     playerSearch: '.player-wrapper-search',
@@ -17,11 +18,12 @@ export const select = {
     homePage: '#template-home-page',
     searchPage: '#template-search-page',
     discoverPage: '#template-discover-page',
+    joinPage: '#template-join-page',
     player: '#template-player',
   },
 
   nav: {
-    links: '.nav__links a',
+    links: '.nav__links a, .button-container',
   },
 
   search: {
@@ -40,7 +42,6 @@ export const classNames = {
 };
 
 export const db = {
-  //url: '//' + window.location.hostname + (window.location.hostname == 'localhost' ? ':3131' : ''),
   url: '//localhost:3131',
   songs: 'songs',
 };
@@ -49,5 +50,6 @@ export const templates = {
   homePage: Handlebars.compile(document.querySelector(select.templateOf.homePage).innerHTML),
   searchPage: Handlebars.compile(document.querySelector(select.templateOf.searchPage).innerHTML),
   discoverPage: Handlebars.compile(document.querySelector(select.templateOf.discoverPage).innerHTML),
+  joinPage: Handlebars.compile(document.querySelector(select.templateOf.joinPage).innerHTML),
   player: Handlebars.compile(document.querySelector(select.templateOf.player).innerHTML),
 };

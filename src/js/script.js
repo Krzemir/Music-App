@@ -2,14 +2,14 @@ import { select, classNames, db } from './settings.js';
 import Home from './home.js';
 import Search from './search.js';
 import Discover from './discover.js';
-
-//const log = console.log;
+import Join from './join.js';
 
 const app = {
   initPages: function () {
     const thisApp = this;
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
+    console.log(document.querySelectorAll(select.nav.links));
 
     const idFromHash = window.location.hash.replace('#/', '');
 
@@ -61,12 +61,13 @@ const app = {
         new Home(thisPage.data);
         new Search(thisPage.data);
         new Discover(thisPage.data);
+        new Join(thisPage.data);
       });
   },
 
   init: function () {
-    this.initPages();
     this.initData();
+    this.initPages();
   },
 };
 

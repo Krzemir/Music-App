@@ -1,7 +1,6 @@
 import { select, templates } from './settings.js';
 import Player from './player.js';
 
-//const log = console.log;
 class Home {
   constructor(allSongs) {
     const thisPage = this;

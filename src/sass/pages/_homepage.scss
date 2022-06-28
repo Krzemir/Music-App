@@ -5,7 +5,7 @@
 }
 
 .subscribe {
-  background: url("../images/subscribe.jpg");
+  background: url('../images/subscribe.jpg');
   background-repeat: no-repeat;
   position: relative;
   background-position: 50%;
@@ -15,49 +15,7 @@
   z-index: -3;
 
   &__inner {
-    height: 80%;
-
-    &-image {
-      position: relative;
-      top: 170px;
-
-      img {
-        width: 100%;
-      }
-      z-index: -1;
-    }
-
-    &-artist {
-      position: relative;
-      top: 660px;
-      right: -120px;
-
-      h4 {
-        margin: 0;
-      }
-
-      .surname {
-        position: relative;
-        right: -80px;
-
-        span {
-          color: $highlight-color;
-        }
-      }
-    }
-
-    &-info {
-      text-align: right;
-
-      h3 {
-        color: $font-color-light;
-      }
-
-      h3:nth-of-type(2) {
-        text-transform: none;
-        color: $font-color-main;
-      }
-    }
+    position: relative;
 
     &-title {
       text-align: center;
@@ -65,10 +23,54 @@
       position: relative;
       top: -70px;
     }
+    &-info {
+      text-align: right;
+      h3:nth-child(2) {
+        text-transform: none;
+      }
+    }
+
+    &-artist {
+      span {
+        color: $highlight-color;
+      }
+
+      .name {
+        position: relative;
+        right: -80px;
+        @media (max-width: 900px) {
+          margin-top: 30px;
+          margin-bottom: 40px;
+        }
+      }
+      .surname {
+        position: relative;
+        right: -250px;
+        @media (max-width: 900px) {
+          //position: relative;
+          left: 70px;
+          margin-top: 30px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    &-image {
+      z-index: -1;
+    }
 
     button {
-      position: relative;
-      top: 660px;
+      cursor: pointer;
+      text-transform: none;
+      position: absolute;
+      top: 400px;
+      left: 200px;
+
+      @media (max-width: 900px) {
+        position: absolute;
+        top: 1100px;
+        left: 200px;
+      }
     }
   }
 }

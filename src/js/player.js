@@ -5,7 +5,6 @@ class Player {
   }
 
   initPlayer(selector) {
-    //console.log('selector', selector);
     // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({
       selector: selector,

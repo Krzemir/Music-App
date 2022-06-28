@@ -1,6 +1,5 @@
 .button {
   width: 310px;
-  height: 130px;
   background-color: $highlight-color;
   color: $font-color-main;
   font-family: $font-main;
@@ -16,13 +15,7 @@
   height: 300px;
 }
 
-.player-wrapper {
-  margin: auto;
-}
-
 .player {
-  margin: auto;
-
   &__title {
     text-align: left;
     padding-left: 10px;
@@ -33,7 +26,7 @@
   }
 
   &__details-ranking {
-    text-align: right;
+    text-align: center;
   }
 }
 

@@ -24,8 +24,6 @@ class Discover {
         fileUrl: '<source src="./songs/' + song.filename + '" type="audio/mpeg">',
       };
 
-      // console.log(song.title);
-
       if (song.id == randomSong) {
         const playerContainer = document.querySelector(select.containerOf.playerDiscover);
 
@@ -34,9 +32,6 @@ class Discover {
         playerContainer.innerHTML = generatedHTML;
       }
     }
-
-    const playerContainer = document.querySelectorAll(select.containerOf.selectorPlayerDiscover);
-    console.log('contener', playerContainer);
 
     new Player(select.containerOf.selectorPlayerDiscover);
   }

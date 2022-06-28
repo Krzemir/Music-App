@@ -1,6 +1,5 @@
 import Player from './player.js';
 import { select, templates } from './settings.js';
-//const log = console.log;
 
 class Search {
   constructor(allSongs) {
@@ -13,7 +12,6 @@ class Search {
     const form = document.querySelector(select.search.form);
     const search = document.querySelector(select.search.input);
     const playerContainer = document.querySelector(select.containerOf.playerSearch);
-
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       playerContainer.innerHTML = '';
@@ -35,10 +33,8 @@ class Search {
           playerContainer.innerHTML += generatedHTML;
           searchResultsNumber += 1;
         }
-        console.log(searchResultsNumber);
       }
       const searchResultsNumberContainter = document.querySelector(select.containerOf.searchResultsNumber);
-      console.log(searchResultsNumberContainter);
 
       if (searchResultsNumber == 0) {
         searchResultsNumberContainter.innerText = 'We have found nothing';
