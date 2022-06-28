@@ -66,8 +66,8 @@ const app = {
   },
 
   init: function () {
-    this.initData();
     this.initPages();
+    this.initData();
   },
 };
 

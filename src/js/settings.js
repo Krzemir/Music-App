@@ -12,6 +12,7 @@ export const select = {
     playerDiscover: '.player-wrapper-discover',
     selectorPlayerDiscover: '.player-wrapper-discover .player',
     searchResultsNumber: '.search-results-number',
+    categories: '.categories-list',
   },
 
   templateOf: {
@@ -26,6 +27,10 @@ export const select = {
     links: '.nav__links a, .button-container',
   },
 
+  categories: {
+    link: 'categories-list a',
+  },
+
   search: {
     form: '.search-form',
     input: '#search_input',
@@ -37,6 +42,9 @@ export const classNames = {
     active: 'active',
   },
   nav: {
+    active: 'active',
+  },
+  categories: {
     active: 'active',
   },
 };

@@ -4,6 +4,29 @@
   height: 800px;
 }
 
+.home__categories {
+  h5 {
+    text-align: center;
+    color: $font-color-main;
+  }
+
+  li {
+    display: inline;
+    .active {
+      color: $highlight-color;
+      font-weight: 600;
+    }
+    a {
+      color: $font-color-light;
+      text-decoration: none;
+      .active {
+        color: $highlight-color;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
 .subscribe {
   background: url('../images/subscribe.jpg');
   background-repeat: no-repeat;
