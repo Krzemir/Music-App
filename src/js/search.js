@@ -5,15 +5,51 @@ class Search {
   constructor(allSongs) {
     const thisPage = this;
     thisPage.searchInputRender();
+    thisPage.generateCategory(allSongs);
+    //thisPage.search(allSongs);
+  }
+
+  generateCategory(allSongs) {
+    const thisPage = this;
+    const categoriesContainer = document.getElementById(select.containerOf.searchCategories);
+    let html = '<option value="clean"></option>';
+
+    const songsCategories = [];
+
+    for (const song of allSongs) {
+      for (const category of song.categories) {
+        if (!songsCategories.includes(category)) {
+          songsCategories.push(category);
+        }
+      }
+    }
+    for (let songCategory of songsCategories) {
+      const linkHTML = '<option value="' + songCategory + '">' + songCategory + '</option>';
+
+      html = html + ' ' + linkHTML;
+    }
+    categoriesContainer.innerHTML = html;
+
     thisPage.search(allSongs);
   }
 
   search(allSongs) {
     const form = document.querySelector(select.search.form);
     const search = document.querySelector(select.search.input);
+    let selectedCategory;
+    const searchCategories = document.getElementById(select.containerOf.searchCategories);
     const playerContainer = document.querySelector(select.containerOf.playerSearch);
+
+    searchCategories.addEventListener('input', function (event) {
+      event.preventDefault();
+      selectedCategory = event.target.value;
+      //console.log(selectedCategory);
+    });
+
     form.addEventListener('submit', function (event) {
       event.preventDefault();
+      //console.log(selectedCategory);
+
       playerContainer.innerHTML = '';
 
       const searchData = search.value.toLowerCase();
@@ -27,7 +63,16 @@ class Search {
           file: song.filename,
           fileUrl: '<source src="./songs/' + song.filename + '" type="audio/mpeg">',
         };
-        const songToDisplay = song.title.toLowerCase().includes(searchData) || song.author.toLowerCase().includes(searchData);
+
+        console.log(selectedCategory);
+        console.log(song.categories.includes(selectedCategory));
+
+        if (song.categories.includes(selectedCategory)) {
+          console.log('tru');
+        }
+
+        const songToDisplay = (song.title.toLowerCase().includes(searchData) || song.author.toLowerCase().includes(searchData)) & (song.categories.includes(selectedCategory) || selectedCategory == undefined || selectedCategory.includes('clean'));
+
         if (songToDisplay == true) {
           const generatedHTML = templates.player(templateData);
           playerContainer.innerHTML += generatedHTML;

@@ -10,6 +10,7 @@ const app = {
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
     console.log(document.querySelectorAll(select.nav.links));
+    console.log(document.querySelectorAll('.button-container a'));
 
     const idFromHash = window.location.hash.replace('#/', '');
 

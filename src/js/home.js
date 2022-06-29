@@ -14,8 +14,8 @@ class Home {
 
   initPlayer(allSongs, activeCategories) {
     const playerContainer = document.querySelector(select.containerOf.playerHome);
-    log('active categories', activeCategories);
-    log('lengtd', activeCategories.length);
+    // log('active categories', activeCategories);
+    // log('lengtd', activeCategories.length);
     for (let song of allSongs) {
       const songFileUrl = '<source src="./songs/' + song.filename + '" type="audio/mpeg">';
 

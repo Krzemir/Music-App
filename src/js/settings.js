@@ -13,6 +13,7 @@ export const select = {
     selectorPlayerDiscover: '.player-wrapper-discover .player',
     searchResultsNumber: '.search-results-number',
     categories: '.categories-list',
+    searchCategories: 'search_select',
   },
 
   templateOf: {
@@ -24,7 +25,7 @@ export const select = {
   },
 
   nav: {
-    links: '.nav__links a, .button-container',
+    links: '.nav__links a, .button-container a',
   },
 
   categories: {
