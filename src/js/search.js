@@ -6,7 +6,6 @@ class Search {
     const thisPage = this;
     thisPage.searchInputRender();
     thisPage.generateCategory(allSongs);
-    //thisPage.search(allSongs);
   }
 
   generateCategory(allSongs) {
@@ -43,12 +42,10 @@ class Search {
     searchCategories.addEventListener('input', function (event) {
       event.preventDefault();
       selectedCategory = event.target.value;
-      //console.log(selectedCategory);
     });
 
     form.addEventListener('submit', function (event) {
       event.preventDefault();
-      //console.log(selectedCategory);
 
       playerContainer.innerHTML = '';
 
@@ -63,13 +60,6 @@ class Search {
           file: song.filename,
           fileUrl: '<source src="./songs/' + song.filename + '" type="audio/mpeg">',
         };
-
-        console.log(selectedCategory);
-        console.log(song.categories.includes(selectedCategory));
-
-        if (song.categories.includes(selectedCategory)) {
-          console.log('tru');
-        }
 
         const songToDisplay = (song.title.toLowerCase().includes(searchData) || song.author.toLowerCase().includes(searchData)) & (song.categories.includes(selectedCategory) || selectedCategory == undefined || selectedCategory.includes('clean'));
 

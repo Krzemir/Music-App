@@ -2,13 +2,13 @@ import { select, templates } from './settings.js';
 import Player from './player.js';
 
 class Discover {
-  constructor(allSongs) {
+  constructor(allSongs, userFavorites) {
     const thisPage = this;
     thisPage.render();
-    thisPage.randomSong(allSongs);
+    thisPage.randomSong(allSongs, userFavorites);
   }
 
-  randomSong(allSongs) {
+  randomSong(allSongs, userFavorites) {
     const numberOfSongs = allSongs.length;
 
     const randomSong = Math.floor(Math.random() * numberOfSongs) + 1;

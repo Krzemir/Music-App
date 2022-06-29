@@ -1,5 +1,6 @@
 import { classNames, select, templates } from './settings.js';
 import Player from './player.js';
+import Discover from './discover.js';
 
 class Home {
   constructor(allSongs) {
@@ -9,6 +10,7 @@ class Home {
     thisPage.generateCategory(allSongs);
 
     thisPage.initPlayer(allSongs, activeCategories);
+    thisPage.userData(allSongs);
   }
 
   initPlayer(allSongs, activeCategories) {
@@ -81,7 +83,6 @@ class Home {
         if (categoryLink.classList.contains(classNames.categories.active) & !activeCategories.includes(chosenCategory)) {
           activeCategories.push(chosenCategory);
         } else if (!categoryLink.classList.contains(classNames.categories.active) & activeCategories.includes(chosenCategory)) {
-          // log(chosenCategory);
           const indexOfInactiveCategory = activeCategories.indexOf(chosenCategory);
           activeCategories.splice(indexOfInactiveCategory, 1);
         }
@@ -89,6 +90,39 @@ class Home {
         thisPage.initPlayer(allSongs, activeCategories);
       });
     }
+  }
+
+  userData(allSongs) {
+    const players = document.querySelectorAll('.player');
+
+    let userFavorites = [];
+
+    for (let player of players) {
+      player.addEventListener('click', function (event) {
+        const clickedPlayer = event.currentTarget;
+        const file = clickedPlayer.querySelector('source');
+
+        const fileName = file.getAttribute('src').substr(8);
+
+        for (const song of allSongs) {
+          const songCategories = song.categories;
+
+          const songFilename = song.filename;
+
+          if (songFilename == fileName) {
+            for (let category of songCategories) {
+              if (!userFavorites.includes(category)) {
+                userFavorites.push(category);
+              }
+            }
+          }
+        }
+        new Discover(allSongs, userFavorites);
+        console.log(userFavorites);
+      });
+    }
+
+    console.log('fav', userFavorites);
   }
 
   renderPage() {

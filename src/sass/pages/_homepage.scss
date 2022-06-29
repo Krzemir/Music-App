@@ -65,7 +65,7 @@
       .name {
         position: relative;
         right: -80px;
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
           margin-top: 30px;
           margin-bottom: 40px;
         }
@@ -73,9 +73,8 @@
       .surname {
         position: relative;
         right: -250px;
-        @media (max-width: 900px) {
-          //position: relative;
-          left: 70px;
+        @media (max-width: 1000px) {
+          left: 50px;
           margin-top: 30px;
           margin-bottom: 40px;
         }
@@ -89,7 +88,6 @@
     .button-container {
       border: solid, red;
       height: 100%;
-      // position: absolute;
       a {
         display: block;
         height: 100%;
@@ -102,12 +100,6 @@
       text-transform: none;
       position: absolute;
       top: 400px;
-
-      // @media (max-width: 900px) {
-      //   //position: absolute;
-      //   top: 1100px;
-      //   left: 200px;
-      // }
     }
   }
 }

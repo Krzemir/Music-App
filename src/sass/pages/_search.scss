@@ -17,15 +17,23 @@ form {
 
 .placeholder {
   height: 50px;
-  // width: 100%;
   background: $font-color-main;
   border-radius: 10px;
   font-family: $font-main;
   color: $font-color-light;
-  font-size: 40px;
+  font-size: 30px;
   padding-left: 10px;
   padding-right: 10px;
   border: none;
+}
+
+#search_select {
+  height: 50px;
+  background: $font-color-main;
+  border-radius: 10px;
+  font-family: $font-main;
+  color: $font-color-light;
+  font-size: 30px;
 }
 
 .search-button {
