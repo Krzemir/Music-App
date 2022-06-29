@@ -8,9 +8,9 @@ const app = {
   initPages: function () {
     const thisApp = this;
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
+    console.log(thisApp.pages);
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-    console.log(document.querySelectorAll(select.nav.links));
-    console.log(document.querySelectorAll('.button-container a'));
+    console.log(thisApp.navLinks);
 
     const idFromHash = window.location.hash.replace('#/', '');
 
@@ -25,10 +25,11 @@ const app = {
     thisApp.activatePage(pageMatchingHash);
 
     for (let link of thisApp.navLinks) {
+      console.log('link', link);
       link.addEventListener('click', function (event) {
         const clickedLink = this;
         event.preventDefault();
-
+        console.log('clickedLink');
         const id = clickedLink.getAttribute('href').replace('#', '');
         thisApp.activatePage(id);
 
@@ -63,11 +64,11 @@ const app = {
         new Search(thisPage.data);
         new Discover(thisPage.data);
         new Join(thisPage.data);
+        thisPage.initPages();
       });
   },
 
   init: function () {
-    this.initPages();
     this.initData();
   },
 };

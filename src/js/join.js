@@ -1,13 +1,13 @@
 import { select, templates } from './settings.js';
 
 class Join {
-  constructor(data) {
+  constructor() {
     const thisPage = this;
-    thisPage.pageRender(data);
+    thisPage.pageRender();
   }
 
-  pageRender(data) {
-    const generatedHTML = templates.joinPage(data);
+  pageRender() {
+    const generatedHTML = templates.joinPage();
 
     const pageContainer = document.querySelector(select.containerOf.joinPage);
 

@@ -82,6 +82,11 @@
       z-index: -1;
     }
 
+    .button-container {
+      border: solid, red;
+      height: 100px;
+    }
+
     button {
       cursor: pointer;
       text-transform: none;
