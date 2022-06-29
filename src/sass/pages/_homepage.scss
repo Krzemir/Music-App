@@ -9,12 +9,16 @@
     text-align: center;
     color: $font-color-main;
   }
-
+  margin-bottom: 70px;
   li {
     display: inline;
     .active {
       color: $highlight-color;
       font-weight: 600;
+    }
+    &:not(:last-of-type)::after {
+      content: ', ';
+      color: $font-color-light;
     }
     a {
       color: $font-color-light;
@@ -84,7 +88,13 @@
 
     .button-container {
       border: solid, red;
-      height: 100px;
+      height: 100%;
+      // position: absolute;
+      a {
+        display: block;
+        height: 100%;
+      }
+      z-index: 5;
     }
 
     button {
@@ -92,13 +102,12 @@
       text-transform: none;
       position: absolute;
       top: 400px;
-      left: 200px;
 
-      @media (max-width: 900px) {
-        position: absolute;
-        top: 1100px;
-        left: 200px;
-      }
+      // @media (max-width: 900px) {
+      //   //position: absolute;
+      //   top: 1100px;
+      //   left: 200px;
+      // }
     }
   }
 }

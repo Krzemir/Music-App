@@ -1,12 +1,9 @@
-/* reguły uniwersalne tyczące się układu strony. To właśnie tu będziemy przechowywać np. klasę .container czy klasy gridowe (.row, col-md-2, col-sm-3 itd.). */
-
 body {
   background-color: $background-color;
   color: $font-color-light;
 }
 
 .container {
-  // width: 100%;
   max-width: 1920px;
   margin: 0 auto;
 }

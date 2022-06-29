@@ -14,6 +14,7 @@ export const select = {
     searchResultsNumber: '.search-results-number',
     categories: '.categories-list',
     searchCategories: 'search_select',
+    player: '.player',
   },
 
   templateOf: {

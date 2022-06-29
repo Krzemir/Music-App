@@ -1,6 +1,5 @@
 import { classNames, select, templates } from './settings.js';
 import Player from './player.js';
-const log = console.log;
 
 class Home {
   constructor(allSongs) {
@@ -14,8 +13,6 @@ class Home {
 
   initPlayer(allSongs, activeCategories) {
     const playerContainer = document.querySelector(select.containerOf.playerHome);
-    // log('active categories', activeCategories);
-    // log('lengtd', activeCategories.length);
     for (let song of allSongs) {
       const songFileUrl = '<source src="./songs/' + song.filename + '" type="audio/mpeg">';
 
