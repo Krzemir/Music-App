@@ -26,6 +26,9 @@ class Discover {
   }
 
   randomSong(songsRange) {
+    const playerContainer = document.querySelector(select.containerOf.playerDiscover);
+    playerContainer.innerHTML = '';
+
     const numberOfSongs = songsRange.length;
 
     const randomSong = Math.floor(Math.random() * numberOfSongs) + 1;
