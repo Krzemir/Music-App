@@ -8,9 +8,7 @@ const app = {
   initPages: function () {
     const thisApp = this;
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
-    console.log(thisApp.pages);
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-    console.log(thisApp.navLinks);
 
     const idFromHash = window.location.hash.replace('#/', '');
 
@@ -28,7 +26,6 @@ const app = {
       link.addEventListener('click', function (event) {
         const clickedLink = this;
         event.preventDefault();
-        console.log('clickedLink');
         const id = clickedLink.getAttribute('href').replace('#', '');
         thisApp.activatePage(id);
 

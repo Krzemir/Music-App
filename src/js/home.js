@@ -118,11 +118,8 @@ class Home {
           }
         }
         new Discover(allSongs, userFavorites);
-        console.log(userFavorites);
       });
     }
-
-    console.log('fav', userFavorites);
   }
 
   renderPage() {

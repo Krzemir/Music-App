@@ -5,15 +5,32 @@ class Discover {
   constructor(allSongs, userFavorites) {
     const thisPage = this;
     thisPage.render();
-    thisPage.randomSong(allSongs, userFavorites);
+
+    thisPage.songRangePrepare(allSongs, userFavorites);
   }
 
-  randomSong(allSongs, userFavorites) {
-    const numberOfSongs = allSongs.length;
+  songRangePrepare(allSongs, userFavorites) {
+    if (userFavorites) {
+      const songsRange = [];
+
+      for (let song of allSongs) {
+        if (song.categories.some((favorite) => userFavorites.includes(favorite))) {
+          songsRange.push(song);
+
+          this.randomSong(songsRange);
+        }
+      }
+    } else {
+      this.randomSong(allSongs);
+    }
+  }
+
+  randomSong(songsRange) {
+    const numberOfSongs = songsRange.length;
 
     const randomSong = Math.floor(Math.random() * numberOfSongs) + 1;
 
-    for (const song of allSongs) {
+    for (const song of songsRange) {
       const templateData = {
         id: song.id,
         title: song.title,
